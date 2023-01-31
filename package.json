@@ -23,7 +23,7 @@
     "sass": "^1.54.3",
     "web-vitals": "^2.1.4"
   },
-    
+    "homepage": "https://pavelkochetkov.github.io/business-card",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
