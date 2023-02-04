@@ -1,7 +1,10 @@
 .resume {
-    width: 300px;
-    flex-direction: column; 
-    animation: ani 500ms linear forwards;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 250px 250px 250px;
+    animation: about 1s forwards;
+    
 }
 
 .aboutme {
@@ -13,8 +16,7 @@
     width: 600px;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-right: 150px;
-    animation: anim 1s forwards;
+    margin-left: 75px;
 }
 
 .sideMenu {
@@ -24,8 +26,9 @@
     box-shadow: 1px 1px 1px 1px rgba(0,0,0);
     color: white;
     cursor: default;
-    margin-top: 60px;
+    margin-top: 40px;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 .sideMenu ul {
@@ -59,17 +62,17 @@
     margin-left: 10px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+.titleAbout {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 50px;
+    font-weight: 500;
+    animation: about 1s;
 }
 
-@keyframes ani {
-    0% {left: 40px; width: 0;}
-  100% {left: 0; width: 20%; opacity: 0.95;}
-}
-
-@keyframes anim {
+@keyframes about {
     0% {opacity: 0;}
-  100% {opacity: 0.9;}
+    100% {opacity: 1;}
 }

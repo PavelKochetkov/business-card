@@ -4,13 +4,22 @@
     grid-template-columns: auto auto auto;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    transform: translateY(-150%);
-    animation: animat 2s forwards;
+    column-gap: 80px;
+    row-gap: 50px;
+    animation: hover 1s forwards;
 }
 
-@keyframes animat {
-    0% {transform: translateY(-150%);}
-    50% {transform: translateY(10%);}
-    100% {transform: translateX(0);}
+.titleSkill {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 50px;
+    font-weight: 500;
+    animation: hover 1s;
+}
+
+@keyframes hover {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }

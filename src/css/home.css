@@ -3,18 +3,33 @@
     text-shadow: 2px 2px 2px black;
     min-height: 85vh;
     opacity: 0;
-    animation: animationHome 2.5s forwards;
+    animation: home 1s forwards;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.home h2 {
-    letter-spacing: 2px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 40px;
+.home h1 {
+    font-family:monospace;
+    font-size: 50px;
     cursor: default;
+    letter-spacing: 2px;
+    color: rgb(236, 240, 247);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 100px;
 }
 
-@keyframes animationHome {
+.home h3 {
+    letter-spacing: 5px;
+    font-family: 'Courier New', Courier, monospace ;
+    font-size: 30px;
+    cursor: default;
+    margin-top: 20px;
+    color: rgb(231, 231, 231);
+}
+
+@keyframes home {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }

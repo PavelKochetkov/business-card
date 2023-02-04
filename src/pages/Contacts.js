@@ -20,10 +20,14 @@ export const Contacts = () => {
     }, [])
    
     return(
-        <div className='sendmessage'>
-            {loading && <Loader/>}
-            {contacts.map(contact => <Sendmessage contact={contact}/>)}
-        </div>
+        <React.Fragment>
+            <div className='titleMessage'>Контакты</div>
+            <div className='sendmessage'>
+                {loading && <Loader/>}
+                {contacts.map(contact => <Sendmessage contact={contact}/>)}
+            </div>
+        </React.Fragment>
+        
     )
       
 }

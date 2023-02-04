@@ -18,9 +18,12 @@ export const Skill = () => {
   }, [])
   
   return (
-    <div className = "cardskill mt-5">
-      {loading && <Loader/>}
-      {certificates.map(certificate => <Cardskill certificate={certificate}/>)}
-    </div>
+    <React.Fragment>
+      <div className='titleSkill'>Навыки</div>
+      <div className = "cardskill mt-4">
+        {loading && <Loader/>}
+        {certificates.map(certificate => <Cardskill certificate={certificate}/>)}
+      </div>
+    </React.Fragment>
   )     
 }

@@ -9,7 +9,7 @@ import { Contacts } from './pages/Contacts'
 const App = () => (
     <HashRouter>
       <Navmenu />
-      <div className="container">
+      <div>
         <Routes>
           <Route path = "/" exact  element = {<Home />} />
           <Route path = "/about" element = {<About />}/>

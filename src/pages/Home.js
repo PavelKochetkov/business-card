@@ -3,10 +3,9 @@ import '../css/home.css'
 
 export const Home = () => {
     return(
-        <div class="d-flex">
-            <div class="home container text-center">
-                <h2>Павел Кочетков - Beginner programmer</h2>
-            </div>
+        <div class="home">
+            <h1>Павел Кочетков</h1>
+            <p><h3>Beginner JavaScript developer</h3></p>
         </div>
     )
 }

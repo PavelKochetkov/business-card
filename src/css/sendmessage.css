@@ -1,15 +1,26 @@
 .sendmessage {
     display: grid;
     grid-template-columns: auto auto;
-    grid-column-gap: 150px;
-    grid-row-gap: 100px;
-    width: auto;
-    height: auto;
+    column-gap: 200px;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.titleMessage {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 50px;
+    font-weight: 500;
+    animation: anim 1s;
 }
 
 .media {
-    margin-top: 100px;
-    transform: translateX(-450%);
+    margin: 50px;
+    animation: anim 1s forwards;
 }
 
 .media a {
@@ -30,6 +41,7 @@
     background-color: gray;
     border-radius: 10px;
     text-shadow: 2px 1px 1px black;
+    width: 305px;
 }
 
 .media img:hover {
@@ -41,12 +53,7 @@ a:hover .title_sl {
     opacity: 1;
 }
 
-.media:nth-child(1) {animation: folder 1s forwards;}
-.media:nth-child(2) {animation: folder 1s forwards 0.5s;}
-.media:nth-child(3) {animation: folder 1s forwards 1s;}
-.media:nth-child(4) {animation: folder 1s forwards 1.5s;}
-
-@keyframes folder {
-    0% {transform: translateX(-450%);}
-    100% {transform: translateX(0);}
+@keyframes anim {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
