@@ -5,13 +5,19 @@ import { baseUrl } from '../config'
 import { Loader } from '../components/Loader'
 
 export const Skill = () => {
-  const [certificates, setCertificates] = useState([])
+  const [certificatesJsTs, setCertificatesJsTs] = useState([])
+  const [certificatesReact, setCertificatesReact] = useState([])
+  const [otherСertificates, setOtherСertificates] = useState([])
   const [loading, setLoading] = useState(false)
   useEffect (() => {
     const fetchData = async () => {
       setLoading(true)
-      const response = await axios.get(`${baseUrl}certificates.json`)
-      setCertificates(response.data)
+      const resCertificatesJsTs = await axios.get(`${baseUrl}certificates.json`)
+      const resCertificatesReact = await axios.get(`${baseUrl}react.json`)
+      const resOtherCertificates = await axios.get(`${baseUrl}othercertificates.json`)
+      setCertificatesJsTs(resCertificatesJsTs.data)
+      setCertificatesReact(resCertificatesReact.data)
+      setOtherСertificates(resOtherCertificates.data)
       setLoading(false)
     }
     fetchData()
@@ -20,9 +26,18 @@ export const Skill = () => {
   return (
     <React.Fragment>
       <div className='titleSkill'>Навыки</div>
+      {loading && <Loader/>}
+      <div className='titleProgLang'>Языки программирования</div>
       <div className = "cardskill mt-4">
-        {loading && <Loader/>}
-        {certificates.map(certificate => <Cardskill certificate={certificate}/>)}
+        {certificatesJsTs.map(certificate => <Cardskill certificate={certificate}/>)}
+      </div>
+      <div className='titleProgLang'>Библиотеки</div>
+      <div className = "cardskill mt-4">
+        {certificatesReact.map(certificate => <Cardskill certificate={certificate}/>)}
+      </div>
+      <div className='titleProgLang'>Прочие сертификаты</div>
+      <div className = "cardskill mt-4">
+        {otherСertificates.map(certificate => <Cardskill certificate={certificate}/>)}
       </div>
     </React.Fragment>
   )     

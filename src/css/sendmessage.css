@@ -28,8 +28,7 @@
 }
 
 .media img {
-    border: 4px solid rgba(1, 189, 164, 0.733);
-    opacity: 0.9;
+    border: 3px solid rgba(255, 166, 0, 0.205);
 }
 
 .title_sl {
@@ -45,7 +44,7 @@
 }
 
 .media img:hover {
-    border: 4px solid rgb(1, 189, 164);
+    border-color: orange;
     opacity: 1;
 }
 

@@ -1,12 +1,18 @@
 .cardskill {
     display: grid;
-    width: 100%;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
+    grid-template-columns: repeat(3, 550px);
+    animation: appearance 1s forwards;
     align-items: center;
-    column-gap: 80px;
-    row-gap: 50px;
-    animation: hover 1s forwards;
+}
+
+.texttitle {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    animation: appearance 1s;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.5;
 }
 
 .titleSkill {
@@ -16,10 +22,43 @@
     margin-top: 70px;
     font-size: 50px;
     font-weight: 500;
-    animation: hover 1s;
+    animation: appearance 1s;
 }
 
-@keyframes hover {
+.titleProgLang {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 200px;
+    animation: appearance 1s;
+}
+
+.cardimage {
+    border: 3px solid rgba(255, 166, 0, 0.205);
+    width: 400px;
+    height: 230px;
+    margin-left: 200px;
+    text-align: center;
+}
+
+.cardimage>a {
+    text-decoration: none;
+}
+
+.cardimage:hover {
+    border-color: orange;
+}
+
+a:hover .texttitle {
+    color: orange;
+    opacity: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@keyframes appearance {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }

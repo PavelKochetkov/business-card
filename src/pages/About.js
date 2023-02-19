@@ -20,16 +20,14 @@ export const About = () => {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true)
-            // const resLanguge = await axios.get(`${baseUrl}userLanguges.json`)
-            //     setLanguges(resLanguge.data)
             const resTech = await axios.get(`${baseUrl}tech.json`)
-                setTech(resTech.data)
+            setTech(resTech.data)
             const resQualities = await axios.get(`${baseUrl}userQualities.json`)
-                setQualities(resQualities.data)
+            setQualities(resQualities.data)
             const resHobby = await axios.get(`${baseUrl}userHobby.json`)
-                setHobbies(resHobby.data)
+            setHobbies(resHobby.data)
             const resQuest = await axios.get(`${baseUrl}questionnaire.json`)
-                setQuests(resQuest.data)
+            setQuests(resQuest.data)
             setLoading(false)
         }
         fetchData()
@@ -40,12 +38,10 @@ export const About = () => {
                 {loading && <Loader/>}
                 <div className='resume'>
                     {tech.map(skill => <Tech skill={skill}/>)}
-                    {/* {languges.map(languge => <Languges languge={languge}/>)} */}
                     {qualities.map(qualitie => <Qualities qualitie={qualitie}/>)}
                     {hobbies.map(hobby => <Hobby hobby={hobby}/>)}
                     {quests.map(quest => <Quests quest={quest}/>)}
                 </div>
-                    
             </React.Fragment>
             
         )
