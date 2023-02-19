@@ -1,21 +1,21 @@
 [
     {
-        "img": "/business-card/img/contact/vk.jpg",
+        "img": "/business-card/img/contact/vk.png",
         "name": "vkontakte",
         "url": "https://vk.com/id25519335",
         "title": "ВКонтакте"
     }, {
-        "img": "/business-card/img/contact/whatsapp.jpg",
+        "img": "/business-card/img/contact/whatsapp.png",
         "name": "whatsapp",
         "url": "https://api.whatsapp.com/send?phone=79028825210",
         "title": "WhatsApp"
     }, {
-        "img": "/business-card/img/contact/telegram.jpg",
+        "img": "/business-card/img/contact/telegram.png",
         "name": "telegram",
         "url": "https://t.me/PKochetkov",
         "title": "Telegram"
     }, {
-        "img": "/business-card/img/contact/GitHub.jpeg",
+        "img": "/business-card/img/contact/GitHub.png",
         "name": "gitHub",
         "url": "https://github.com/PavelKochetkov",
         "title": "GitHub"
