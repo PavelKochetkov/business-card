@@ -22,21 +22,20 @@ export const Skill = () => {
     }
     fetchData()
   }, [])
-  
   return (
     <React.Fragment>
       <div className='titleSkill'>Навыки</div>
       {loading && <Loader/>}
       <div className='titleProgLang'>Языки программирования</div>
-      <div className = "cardskill mt-4">
+      <div className="proglang">
         {certificatesJsTs.map(certificate => <Cardskill certificate={certificate}/>)}
       </div>
       <div className='titleProgLang'>Библиотеки</div>
-      <div className = "cardskill mt-4">
+      <div className="library">
         {certificatesReact.map(certificate => <Cardskill certificate={certificate}/>)}
       </div>
       <div className='titleProgLang'>Прочие сертификаты</div>
-      <div className = "cardskill mt-4">
+      <div className="other">
         {otherСertificates.map(certificate => <Cardskill certificate={certificate}/>)}
       </div>
     </React.Fragment>

@@ -1,22 +1,24 @@
-.cardskill {
-    display: grid;
-    grid-template-columns: repeat(3, 550px);
-    animation: appearance 1s forwards;
+.proglang, .library {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
 }
-
+.other {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .texttitle {
-    color: white;
+    color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     animation: appearance 1s;
-    margin-top: 10px;
     padding-bottom: 10px;
     opacity: 0.5;
 }
-
 .titleSkill {
-    color: white;
+    color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     margin-top: 70px;
@@ -24,38 +26,30 @@
     font-weight: 500;
     animation: appearance 1s;
 }
-
 .titleProgLang {
-    color: white;
+    color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 50px;
     font-size: 30px;
     font-weight: 500;
     margin-left: 200px;
     animation: appearance 1s;
+    margin-bottom: 40px;
 }
-
 .cardimage {
-    border: 3px solid rgba(255, 166, 0, 0.205);
-    width: 400px;
-    height: 230px;
-    margin-left: 200px;
-    text-align: center;
+    border: 1px solid whitesmoke;
+    margin: 10px;
+    animation: appearance 1s;
 }
-
 .cardimage>a {
     text-decoration: none;
 }
-
 .cardimage:hover {
     border-color: orange;
 }
-
 a:hover .texttitle {
-    color: orange;
-    opacity: 1;
-    font-size: 16px;
-    font-weight: bold;
+  color: orange;
+  opacity: 1;
 }
 
 @keyframes appearance {

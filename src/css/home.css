@@ -6,13 +6,14 @@
     align-content: center;
     opacity: 0;
     animation: home 1s forwards;
-    height: 80vh;
+    height: calc(100vh - 145px);
     font-family: 'Courier New', Courier, monospace;
     color: whitesmoke;
 }
 .titlehome {
     font-size: 55px;
     letter-spacing: 15px;
+    margin-bottom: 20px;
 }
 .jobtitle {
     font-size: 30px;
