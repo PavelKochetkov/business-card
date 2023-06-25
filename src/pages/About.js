@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import '../css/resume.css'
 import { baseUrl } from '../config'
 import axios from 'axios'
-// import { Languges } from '../components/Languges'
 import {Tech} from '../components/Tech'
 import { Qualities } from '../components/Qualities'
 import { Hobby } from '../components/Hooby'
@@ -10,7 +9,6 @@ import { Quests } from '../components/Quests'
 import { Loader } from '../components/Loader'
 
 export const About = () => {
-    // const [languges, setLanguges] = useState([])
     const [tech, setTech] = useState([])
     const [qualities, setQualities] = useState([])
     const [hobbies, setHobbies] = useState([])
