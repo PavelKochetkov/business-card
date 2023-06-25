@@ -1,34 +1,35 @@
-.navmenu {
-    margin-top: 10px;
-    height: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-bottom: 1px solid rgba(70, 131, 180, 0.45);
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 50px;
 }
-
 .titlename {
-    margin-left: 20px;
-    font-weight: 600;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
-    color:rgb(255, 255, 255);
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 2px black;
-    cursor: default;
-    font-family: 'Courier New', Courier, monospace;
 }
-
-.bt {
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    font-size: x-large;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    text-transform: none;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 2px;
+.navmenuright {
+    margin-left: 900px;
 }
-
-li a.active {
+.activ {
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-right: 20px;
+}
+.activ:hover {
+    color: rgb(104, 104, 233);
+}
+.active {
+    color: rgb(104, 104, 212);
     font-weight: bold;
-    color:#0d6efd
+}
+.hr {
+    margin-top: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0.2;
 }

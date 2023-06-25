@@ -1,32 +1,21 @@
 .home {
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 2px black;
-    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     opacity: 0;
     animation: home 1s forwards;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 80vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
 }
-
-.home h1 {
-    font-family:monospace;
-    font-size: 50px;
-    cursor: default;
-    letter-spacing: 2px;
-    color: rgb(236, 240, 247);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 100px;
+.titlehome {
+    font-size: 55px;
+    letter-spacing: 15px;
 }
-
-.home h3 {
-    letter-spacing: 5px;
-    font-family: 'Courier New', Courier, monospace ;
+.jobtitle {
     font-size: 30px;
-    cursor: default;
-    margin-top: 20px;
-    color: rgb(231, 231, 231);
 }
 
 @keyframes home {
