@@ -5,10 +5,10 @@ export const Sendmessage = (props) => {
     return (
         <React.Fragment>
             <div className="media">
-                <a href={props.contact.url} target='_blank' rel="noreferrer">
+                {/* <a href={props.contact.url} target='_blank' rel="noreferrer">
                     <div className="title_sl">{props.contact.title}</div>
                     <img src={props.contact.img} alt={props.contact.name}/>
-                </a>
+                </a> */}
             </div>
         </React.Fragment>
     )

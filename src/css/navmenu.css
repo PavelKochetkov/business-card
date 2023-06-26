@@ -1,34 +1,77 @@
-.navmenu {
-    margin-top: 10px;
-    height: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-bottom: 1px solid rgba(70, 131, 180, 0.45);
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 50px;
+    justify-content: center;
+    align-content: center;
 }
-
 .titlename {
-    margin-left: 20px;
-    font-weight: 600;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
-    color:rgb(255, 255, 255);
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 2px black;
-    cursor: default;
-    font-family: 'Courier New', Courier, monospace;
 }
-
-.bt {
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    font-size: x-large;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    text-transform: none;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 2px;
+.navmenuright {
+    margin-left: 900px;
 }
-
-li a.active {
+.activ {
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-right: 20px;
+}
+.activ:hover {
+    color: rgb(104, 104, 233);
+}
+.active {
+    color: rgb(104, 104, 212);
     font-weight: bold;
-    color:#0d6efd
 }
+.hr {
+    margin-top: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0.2;
+}
+
+@media(max-width: 1440px) {
+    .navmenuright {
+        margin-left: 400px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        margin-left: 0;
+        text-align: center;
+    }
+    .activ {
+        margin-right: 10px;
+    }
+    .navmenuright {
+        margin-left: 0;
+    }
+    .titlename {
+        margin-right: 90px;
+    }
+}
+@media(max-width: 768px) {
+    .titlename {
+        font-size: 30px;
+        margin-right: 20px;
+    }
+    .activ {
+        font-size: 20px;
+    }
+} 
+@media(max-width: 425px) {
+    .titlename {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .activ {
+        font-size: 10px;
+    }
+}    
