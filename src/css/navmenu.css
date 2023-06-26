@@ -4,6 +4,8 @@
     align-items: center;
     margin-top: 45px;
     margin-left: 50px;
+    justify-content: center;
+    align-content: center;
 }
 .titlename {
     color: white;
@@ -33,3 +35,43 @@
     margin-right: 20px;
     opacity: 0.2;
 }
+
+@media(max-width: 1440px) {
+    .navmenuright {
+        margin-left: 400px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        margin-left: 0;
+        text-align: center;
+    }
+    .activ {
+        margin-right: 10px;
+    }
+    .navmenuright {
+        margin-left: 0;
+    }
+    .titlename {
+        margin-right: 90px;
+    }
+}
+@media(max-width: 768px) {
+    .titlename {
+        font-size: 30px;
+        margin-right: 20px;
+    }
+    .activ {
+        font-size: 20px;
+    }
+} 
+@media(max-width: 425px) {
+    .titlename {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .activ {
+        font-size: 10px;
+    }
+}    

@@ -3,11 +3,14 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    align-content: center;
 }
 .other {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 .texttitle {
     color: whitesmoke;
@@ -55,4 +58,22 @@ a:hover .texttitle {
 @keyframes appearance {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@media(max-width: 1440px) {
+    .titleProgLang {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+@media(max-width: 425px) {
+    .proglang, .library {
+        flex-direction: column;
+    }
+    .titleSkill {
+        font-size: 30px;
+    }
+    .titleProgLang {
+        font-size: 20px;
+    }
 }

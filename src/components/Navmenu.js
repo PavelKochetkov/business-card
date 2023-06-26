@@ -14,5 +14,4 @@ export const Navmenu = () => (
         </div>
         <hr className='hr'/>
     </React.Fragment>
-    
 )
