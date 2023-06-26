@@ -40,7 +40,7 @@
     margin-bottom: 40px;
 }
 .cardimage {
-    border: 1px solid whitesmoke;
+    border: 1px solid rgba(245, 245, 245, 0.3);
     margin: 10px;
     animation: appearance 1s;
 }
