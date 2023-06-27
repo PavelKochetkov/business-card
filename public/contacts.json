@@ -5,11 +5,6 @@
         "url": "https://vk.com/id25519335",
         "title": "ВКонтакте"
     }, {
-        "img": "/business-card/img/contact/whatsapp.png",
-        "name": "whatsapp",
-        "url": "https://api.whatsapp.com/send?phone=79028825210",
-        "title": "WhatsApp"
-    }, {
         "img": "/business-card/img/contact/telegram.png",
         "name": "telegram",
         "url": "https://t.me/PKochetkov",

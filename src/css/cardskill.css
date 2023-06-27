@@ -18,7 +18,6 @@
     text-align: center;
     animation: appearance 1s;
     padding-bottom: 10px;
-    opacity: 0.5;
 }
 .titleSkill {
     color: whitesmoke;
@@ -40,7 +39,7 @@
     margin-bottom: 40px;
 }
 .cardimage {
-    border: 1px solid rgba(245, 245, 245, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.205);
     margin: 10px;
     animation: appearance 1s;
 }
