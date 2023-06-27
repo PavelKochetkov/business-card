@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { baseUrl } from '../config'
 import {Sendmessage} from '../components/Sendmessage'
-// import { Loader } from '../components/Loader'
+import { Loader } from '../components/Loader'
 import axios from 'axios'
 import '../css/sendmessage.css'
 
 export const Contacts = () => {
     const [contacts, setContacts] = useState([])
-    // const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
     
     useEffect(() => {
         const fetchData = async () => {
-            // setLoading(true)
+            setLoading(true)
             const resContacts = await axios.get(`${baseUrl}contacts.json`)
             setContacts(resContacts.data)
-            // setLoading(false)
+            setLoading(false)
         }
         fetchData()   
     }, [])
@@ -22,9 +22,8 @@ export const Contacts = () => {
     return(
         <React.Fragment>
             <div className='titleMessage'>Контакты</div>
-            <div className='titleMessage'>Раздел редактируется...</div>
             <div className='sendmessage'>
-                {/* {loading && <Loader/>} */}
+                {loading && <Loader/>}
                 {contacts.map(contact => <Sendmessage contact={contact}/>)}
             </div>
         </React.Fragment>
