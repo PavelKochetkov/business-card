@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Cardskill } from '../components/Cardskill'
 import { baseUrl } from '../config'
 import { Loader } from '../components/Loader'
+import { PageTitle } from '../components/PageTitle'
 
 export const Skill = () => {
   const [certificatesJsTs, setCertificatesJsTs] = useState([])
@@ -24,7 +25,7 @@ export const Skill = () => {
   }, [])
   return (
     <React.Fragment>
-      <div className='titleSkill'>Навыки</div>
+      <PageTitle title={'Навыки'}/>
       {loading && <Loader/>}
       <div className='titleProgLang'>Языки программирования</div>
       <div className="proglang">

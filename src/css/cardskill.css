@@ -19,15 +19,6 @@
     animation: appearance 1s;
     padding-bottom: 10px;
 }
-.titleSkill {
-    color: whitesmoke;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    margin-top: 70px;
-    font-size: 50px;
-    font-weight: 500;
-    animation: appearance 1s;
-}
 .titleProgLang {
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
@@ -46,19 +37,11 @@
 .cardimage>a {
     text-decoration: none;
 }
-.cardimage:hover {
-    border-color: orange;
-}
-a:hover .texttitle {
-  color: orange;
-  opacity: 1;
-}
 
 @keyframes appearance {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-
 @media(max-width: 1440px) {
     .titleProgLang {
         margin-left: 0;
@@ -69,10 +52,15 @@ a:hover .texttitle {
     .proglang, .library {
         flex-direction: column;
     }
-    .titleSkill {
-        font-size: 30px;
-    }
     .titleProgLang {
         font-size: 20px;
     }
+}
+@media (hover: hover) {
+    .cardimage:hover {
+        border-color: orange;
+    }
+    a:hover .texttitle {
+        color: orange;
+      }
 }

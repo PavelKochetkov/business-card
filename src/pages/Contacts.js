@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { baseUrl } from '../config'
-import {Sendmessage} from '../components/Sendmessage'
+import { Sendmessage } from '../components/Sendmessage'
+import { PageTitle } from '../components/PageTitle'
 import { Loader } from '../components/Loader'
 import axios from 'axios'
-import '../css/sendmessage.css'
 
 export const Contacts = () => {
     const [contacts, setContacts] = useState([])
@@ -21,13 +21,11 @@ export const Contacts = () => {
    
     return(
         <React.Fragment>
-            <div className='titleMessage'>Контакты</div>
+            <PageTitle title={'Контакты'}/>
             <div className='sendmessage'>
                 {loading && <Loader/>}
                 {contacts.map(contact => <Sendmessage contact={contact}/>)}
             </div>
         </React.Fragment>
-        
-    )
-      
+    )  
 }
