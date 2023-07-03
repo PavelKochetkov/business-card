@@ -1,84 +1,61 @@
 .resume {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-    grid-template-columns: 250px 250px 250px;
-    animation: about 1s forwards;
-    
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    animation: resume 1s;
 }
 
-.aboutme {
-    background-color: azure;
-    border: 5px solid rgb(57, 93, 160);
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0);
-    border-radius: 10px;
-    cursor: default;
-    width: 600px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 75px;
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid rgba(245, 245, 245, 0.3);
+    border-radius: 20px;
+    width: 900px;
+    box-shadow: 2px 2px 2px black;
 }
 
-.sideMenu {
-    font-size: 15px;
-    padding: 10px;
-    background-color: rgb(57, 93, 160);
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0);
-    color: white;
-    cursor: default;
-    margin-top: 40px;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-.sideMenu ul {
-    margin-top: 10px;
-}
-
-.contact{
-    padding-left: 10px;
-    text-shadow: 1px 1px 1px  black;
-    font-weight: 500;
-}
-
-.title {
-    padding-left: 10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background-color: rgb(31, 55, 100);
-    margin-top: 15px;
-    border: 1px solid rgb(151, 144, 144);
-}
-
-.work, .education, .courses, .about {
-    color: rgb(21, 36, 63);
-    font-weight: 500;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.workinfo, .educationinfo, .coursesinfo {
-    color: black;
-    font-weight: 500;
-    margin-left: 10px;
-}
-
-.titleAbout {
-    color: white;
+.description {
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    margin-top: 70px;
-    font-size: 50px;
-    font-weight: 500;
-    animation: about 1s;
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: left;
+    padding: 10px;
 }
 
-@keyframes about {
+
+@keyframes resume{
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
 
-@media(max-width: 425px) {
-    .titleAbout {
-        font-size: 20px;
+@media(max-width: 768px) {
+    .info {
+        width: 700px;
     }
+}
+
+@media(max-width: 425px) {
+    .info {
+        width: 400px;
+        flex-direction: column;
+    }
+    .description {
+        font-size: 15px;
+        text-align: justify;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 375px) {
+   .info {
+    width: 320px;
+   }
 }

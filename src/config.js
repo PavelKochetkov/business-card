@@ -1,1 +1,1 @@
-export const baseUrl = '/business-card/'
+export const baseUrl = '/business-card/';

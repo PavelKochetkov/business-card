@@ -11,6 +11,7 @@
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
+    text-shadow: 2px 2px 2px black;
 }
 .navmenuright {
     margin-left: 900px;
