@@ -6,6 +6,7 @@
     font-size: 50px;
     font-weight: 500;
     animation: pagetitle 1s;
+    text-shadow: 2px 2px 2px black;
 }
 
 @media(max-width: 425px) {

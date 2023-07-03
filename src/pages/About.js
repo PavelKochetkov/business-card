@@ -1,24 +1,47 @@
-import React, {useState, useEffect} from 'react'
-// import { baseUrl } from '../config'
-// import axios from 'axios'
-import { Loader } from '../components/Loader'
-import { PageTitle } from '../components/PageTitle'
+import React, { useState, useEffect } from 'react';
+import { baseUrl } from '../config';
+import axios from 'axios';
+import { Loader } from '../components/Loader';
+import { PageTitle } from '../components/PageTitle';
+import { AboutComponent } from '../components/AboutComponents';
+import { MyNameComponent } from '../components/MyNameComponent';
 
 export const About = () => {
-    const [loading, setLoading] = useState(false)
-    
+    const [aboutMe, setAboutMe] = useState([]);
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true)
-           
-            setLoading(false)
-        }
-        fetchData()
-    }, [])
+            setLoading(true);
+            const respAboutMe = await axios.get(`${baseUrl}about.json`);
+            setAboutMe(respAboutMe.data);
+            setLoading(false);
+        };
+        fetchData();
+    }, []);
+    const nowDate = new Date();
+    const birthDay = new Date(1990, 8, 17);
+    const birthDayNow = new Date(
+        nowDate.getFullYear(),
+        birthDay.getMonth(),
+        birthDay.getDate()
+    );
+    let myAge = nowDate.getFullYear() - birthDay.getFullYear();
+    if (nowDate < birthDayNow) {
+        myAge = myAge - 1;
+    }
     return (
         <React.Fragment>
-            <PageTitle title={'Обо мне'}/>
-            {loading && <Loader/>}
+            <PageTitle title={'Обо мне'} />
+            {loading && <Loader />}
+            <MyNameComponent
+                myphoto={'/business-card/img/about/i.png'}
+                name={'Павел Кочетков'}
+                age={`Возраст ${myAge}`}
+            />
+            {aboutMe.map((about, index) => (
+                <AboutComponent key={index} about={about} />
+            ))}
         </React.Fragment>
-    )
-}
+    );
+};

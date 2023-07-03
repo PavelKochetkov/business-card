@@ -15,9 +15,11 @@
     font-size: 55px;
     letter-spacing: 15px;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 2px black;
 }
 .jobtitle {
     font-size: 30px;
+    text-shadow: 2px 2px 2px black;
 }
 
 @keyframes home {

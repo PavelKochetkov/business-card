@@ -28,9 +28,11 @@
     margin-left: 200px;
     animation: appearance 1s;
     margin-bottom: 40px;
+    text-shadow: 2px 2px 2px black;
 }
 .cardimage {
     border: 1px solid rgba(255, 255, 255, 0.205);
+    box-shadow: 2px 2px 2px black;
     margin: 10px;
     animation: appearance 1s;
 }
