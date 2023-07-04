@@ -15,7 +15,8 @@
     box-shadow: 1px 1px 1px black;
 }
 
-.name, .age {
+.name,
+.age {
     font-family: 'Courier New', Courier, monospace;
     color: whitesmoke;
     text-shadow: 2px 2px 2px black;
@@ -29,7 +30,7 @@
     font-size: 20px;
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
     .nameage {
         margin-left: 20px;
     }
@@ -41,7 +42,7 @@
     }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
     .name {
         font-size: 20px;
     }

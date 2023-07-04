@@ -13,8 +13,10 @@ export const Contacts = () => {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const resContacts = await axios.get<IDataContacts[]>(`${baseUrl}contacts.json`);
-            setContacts(resContacts.data)
+            const resContacts = await axios.get<IDataContacts[]>(
+                `${baseUrl}contacts.json`
+            );
+            setContacts(resContacts.data);
             setLoading(false);
         };
         fetchData();

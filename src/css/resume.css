@@ -30,19 +30,22 @@
     padding: 10px;
 }
 
-
-@keyframes resume{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+@keyframes resume {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .info {
         width: 700px;
     }
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
     .info {
         width: 400px;
         flex-direction: column;
@@ -54,8 +57,8 @@
     }
 }
 
-@media(max-width: 375px) {
-   .info {
-    width: 320px;
-   }
+@media (max-width: 375px) {
+    .info {
+        width: 320px;
+    }
 }

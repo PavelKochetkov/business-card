@@ -18,7 +18,7 @@
 
 .media img {
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 2px 2px 2px black;;
+    box-shadow: 2px 2px 2px black;
 }
 
 .title_sl {
@@ -33,28 +33,32 @@
     width: 305px;
 }
 
-@media(hover: hover) {
+@media (hover: hover) {
     .media img:hover {
         border-color: orange;
         opacity: 1;
     }
     a:hover .title_sl {
         opacity: 1;
-    }    
+    }
 }
 
 @keyframes anim {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
     .media {
         margin: 15px;
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .sendmessage {
         flex-direction: column;
         margin-top: 0;
