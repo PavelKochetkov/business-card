@@ -3,7 +3,7 @@ import '../css/sendmessage.css';
 import { IDataContacts } from '../models/IDataContacts';
 
 interface DataPropsContacts {
-    contact: IDataContacts
+    contact: IDataContacts;
 }
 
 export const Sendmessage = (props: DataPropsContacts) => {

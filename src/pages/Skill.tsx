@@ -8,8 +8,12 @@ import { IDataSkill } from '../models/IDataSkill';
 
 export const Skill = () => {
     const [certificatesJsTs, setCertificatesJsTs] = useState<IDataSkill[]>([]);
-    const [certificatesReact, setCertificatesReact] = useState<IDataSkill[]>([]);
-    const [otherСertificates, setOtherСertificates] = useState<IDataSkill[]>([]);
+    const [certificatesReact, setCertificatesReact] = useState<IDataSkill[]>(
+        []
+    );
+    const [otherСertificates, setOtherСertificates] = useState<IDataSkill[]>(
+        []
+    );
     const [loading, setLoading] = useState<boolean>(false);
     useEffect(() => {
         const fetchData = async () => {

@@ -2,10 +2,10 @@ import React from 'react';
 import '../css/myname.css';
 
 interface DataPropsMyNameComponent {
-    myphoto: string
-    name: string
-    age: string
-    alt: string 
+    myphoto: string;
+    name: string;
+    age: string;
+    alt: string;
 }
 
 export const MyNameComponent = (props: DataPropsMyNameComponent) => {

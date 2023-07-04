@@ -1,6 +1,6 @@
 export interface IDataContacts {
-    img: string
-    name: string
-    url: string
-    title: string
+    img: string;
+    name: string;
+    url: string;
+    title: string;
 }

@@ -1,4 +1,5 @@
-.proglang, .library {
+.proglang,
+.library {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -36,22 +37,27 @@
     margin: 10px;
     animation: appearance 1s;
 }
-.cardimage>a {
+.cardimage > a {
     text-decoration: none;
 }
 
 @keyframes appearance {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-@media(max-width: 1440px) {
+@media (max-width: 1440px) {
     .titleProgLang {
         margin-left: 0;
         text-align: center;
     }
 }
-@media(max-width: 425px) {
-    .proglang, .library {
+@media (max-width: 425px) {
+    .proglang,
+    .library {
         flex-direction: column;
     }
     .titleProgLang {
@@ -64,5 +70,5 @@
     }
     a:hover .texttitle {
         color: orange;
-      }
+    }
 }

@@ -3,7 +3,7 @@ import '../css/cardskill.css';
 import { IDataSkill } from '../models/IDataSkill';
 
 interface DataPropsSkill {
-    certificate: IDataSkill
+    certificate: IDataSkill;
 }
 
 export const Cardskill = (props: DataPropsSkill) => {

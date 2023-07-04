@@ -3,7 +3,7 @@ import '../css/resume.css';
 import { IDataAbout } from '../models/IDataAbout';
 
 interface DataPropsAbout {
-    about: IDataAbout
+    about: IDataAbout;
 }
 
 export const AboutComponent = (props: DataPropsAbout) => {

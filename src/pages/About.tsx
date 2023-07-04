@@ -14,7 +14,9 @@ export const About = () => {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const respAboutMe = await axios.get<IDataAbout[]>(`${baseUrl}about.json`);
+            const respAboutMe = await axios.get<IDataAbout[]>(
+                `${baseUrl}about.json`
+            );
             setAboutMe(respAboutMe.data);
             setLoading(false);
         };
