@@ -4,22 +4,23 @@ import { Cardskill } from '../components/Cardskill';
 import { baseUrl } from '../config';
 import { Loader } from '../components/Loader';
 import { PageTitle } from '../components/PageTitle';
+import { IDataSkill } from '../models/IDataSkill';
 
 export const Skill = () => {
-    const [certificatesJsTs, setCertificatesJsTs] = useState([]);
-    const [certificatesReact, setCertificatesReact] = useState([]);
-    const [otherСertificates, setOtherСertificates] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [certificatesJsTs, setCertificatesJsTs] = useState<IDataSkill[]>([]);
+    const [certificatesReact, setCertificatesReact] = useState<IDataSkill[]>([]);
+    const [otherСertificates, setOtherСertificates] = useState<IDataSkill[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const resCertificatesJsTs = await axios.get(
+            const resCertificatesJsTs = await axios.get<IDataSkill[]>(
                 `${baseUrl}certificates.json`
             );
-            const resCertificatesReact = await axios.get(
+            const resCertificatesReact = await axios.get<IDataSkill[]>(
                 `${baseUrl}react.json`
             );
-            const resOtherCertificates = await axios.get(
+            const resOtherCertificates = await axios.get<IDataSkill[]>(
                 `${baseUrl}othercertificates.json`
             );
             setCertificatesJsTs(resCertificatesJsTs.data);

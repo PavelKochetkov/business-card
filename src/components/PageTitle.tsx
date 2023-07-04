@@ -1,6 +1,10 @@
 import React from 'react';
 import '../css/pagetitle.css';
 
-export const PageTitle = (props) => {
+interface DataPropsPageTitle {
+    title: string
+}
+
+export const PageTitle = (props: DataPropsPageTitle) => {
     return <div className="pagetitle">{props.title}</div>;
 };

@@ -1,7 +1,12 @@
 import React from 'react';
 import '../css/sendmessage.css';
+import { IDataContacts } from '../models/IDataContacts';
 
-export const Sendmessage = (props) => {
+interface DataPropsContacts {
+    contact: IDataContacts
+}
+
+export const Sendmessage = (props: DataPropsContacts) => {
     return (
         <React.Fragment>
             <div className="media">

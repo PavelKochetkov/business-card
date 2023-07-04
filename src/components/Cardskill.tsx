@@ -1,7 +1,12 @@
 import React from 'react';
 import '../css/cardskill.css';
+import { IDataSkill } from '../models/IDataSkill';
 
-export const Cardskill = (props) => {
+interface DataPropsSkill {
+    certificate: IDataSkill
+}
+
+export const Cardskill = (props: DataPropsSkill) => {
     return (
         <div className="cardimage">
             <a href={props.certificate.url} target="_blank" rel="noreferrer">
