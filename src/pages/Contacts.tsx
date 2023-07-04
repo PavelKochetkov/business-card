@@ -4,16 +4,17 @@ import { Sendmessage } from '../components/Sendmessage';
 import { PageTitle } from '../components/PageTitle';
 import { Loader } from '../components/Loader';
 import axios from 'axios';
+import { IDataContacts } from '../models/IDataContacts';
 
 export const Contacts = () => {
-    const [contacts, setContacts] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [contacts, setContacts] = useState<IDataContacts[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const resContacts = await axios.get(`${baseUrl}contacts.json`);
-            setContacts(resContacts.data);
+            const resContacts = await axios.get<IDataContacts[]>(`${baseUrl}contacts.json`);
+            setContacts(resContacts.data)
             setLoading(false);
         };
         fetchData();

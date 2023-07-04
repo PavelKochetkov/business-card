@@ -5,15 +5,16 @@ import { Loader } from '../components/Loader';
 import { PageTitle } from '../components/PageTitle';
 import { AboutComponent } from '../components/AboutComponents';
 import { MyNameComponent } from '../components/MyNameComponent';
+import { IDataAbout } from '../models/IDataAbout';
 
 export const About = () => {
-    const [aboutMe, setAboutMe] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [aboutMe, setAboutMe] = useState<IDataAbout[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const respAboutMe = await axios.get(`${baseUrl}about.json`);
+            const respAboutMe = await axios.get<IDataAbout[]>(`${baseUrl}about.json`);
             setAboutMe(respAboutMe.data);
             setLoading(false);
         };
@@ -38,6 +39,7 @@ export const About = () => {
                 myphoto={'/business-card/img/about/i.png'}
                 name={'Павел Кочетков'}
                 age={`Возраст ${myAge}`}
+                alt={'myphoto'}
             />
             {aboutMe.map((about, index) => (
                 <AboutComponent key={index} about={about} />
