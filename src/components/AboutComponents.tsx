@@ -1,6 +1,5 @@
-import React from 'react';
 import '../css/resume.css';
-import { IDataAbout } from '../models/IDataAbout';
+import { IDataAbout } from '../models/IDataProfile';
 
 interface DataPropsAbout {
     about: IDataAbout;

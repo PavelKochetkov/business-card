@@ -1,35 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Cardskill } from '../components/Cardskill';
-import { baseUrl } from '../config';
 import { Loader } from '../components/Loader';
 import { PageTitle } from '../components/PageTitle';
-import { IDataSkill } from '../models/IDataSkill';
+import { IDataSkill } from '../models/IDataProfile';
+import { getProfileOtherSkill, getProfileSkillLibraries, getProfileSkillProgrammingLanguages } from '../api/profile';
 
 export const Skill = () => {
-    const [certificatesJsTs, setCertificatesJsTs] = useState<IDataSkill[]>([]);
-    const [certificatesReact, setCertificatesReact] = useState<IDataSkill[]>(
-        []
-    );
-    const [otherСertificates, setOtherСertificates] = useState<IDataSkill[]>(
-        []
-    );
+    const [langugages, setLangugages] = useState<IDataSkill[]>([]);
+    const [libraries, setLbraries] = useState<IDataSkill[]>([]);
+    const [others, setOthers] = useState<IDataSkill[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const resCertificatesJsTs = await axios.get<IDataSkill[]>(
-                `${baseUrl}certificates.json`
-            );
-            const resCertificatesReact = await axios.get<IDataSkill[]>(
-                `${baseUrl}react.json`
-            );
-            const resOtherCertificates = await axios.get<IDataSkill[]>(
-                `${baseUrl}othercertificates.json`
-            );
-            setCertificatesJsTs(resCertificatesJsTs.data);
-            setCertificatesReact(resCertificatesReact.data);
-            setOtherСertificates(resOtherCertificates.data);
+            const responceLangugage = await getProfileSkillProgrammingLanguages()
+            setLangugages(responceLangugage.data)
+
+            const responceLibraries = await getProfileSkillLibraries()
+            setLbraries(responceLibraries.data)
+
+            const responceOthers = await getProfileOtherSkill()
+            setOthers(responceOthers.data);
             setLoading(false);
         };
         fetchData();
@@ -40,20 +31,20 @@ export const Skill = () => {
             {loading && <Loader />}
             <div className="titleProgLang">Языки программирования</div>
             <div className="proglang">
-                {certificatesJsTs.map((certificate) => (
-                    <Cardskill certificate={certificate} />
+                {langugages.map((certificate, index) => (
+                    <Cardskill certificate={certificate} key={index} />
                 ))}
             </div>
             <div className="titleProgLang">Библиотеки</div>
             <div className="library">
-                {certificatesReact.map((certificate) => (
-                    <Cardskill certificate={certificate} />
+                {libraries.map((certificate, index) => (
+                    <Cardskill certificate={certificate} key={index} />
                 ))}
             </div>
             <div className="titleProgLang">Прочие сертификаты</div>
             <div className="other">
-                {otherСertificates.map((certificate) => (
-                    <Cardskill certificate={certificate} />
+                {others.map((certificate, index) => (
+                    <Cardskill certificate={certificate} key={index} />
                 ))}
             </div>
         </React.Fragment>

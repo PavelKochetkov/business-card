@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { baseUrl } from '../config';
-import axios from 'axios';
 import { Loader } from '../components/Loader';
 import { PageTitle } from '../components/PageTitle';
 import { AboutComponent } from '../components/AboutComponents';
 import { MyNameComponent } from '../components/MyNameComponent';
-import { IDataAbout } from '../models/IDataAbout';
+import { IDataAbout } from '../models/IDataProfile';
+import { getProfileAbout } from '../api/profile';
 
 export const About = () => {
     const [aboutMe, setAboutMe] = useState<IDataAbout[]>([]);
@@ -14,10 +13,8 @@ export const About = () => {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const respAboutMe = await axios.get<IDataAbout[]>(
-                `${baseUrl}about.json`
-            );
-            setAboutMe(respAboutMe.data);
+            const responce = await getProfileAbout()
+            setAboutMe(responce.data)
             setLoading(false);
         };
         fetchData();

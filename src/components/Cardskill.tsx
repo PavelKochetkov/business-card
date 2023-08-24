@@ -1,6 +1,5 @@
-import React from 'react';
 import '../css/cardskill.css';
-import { IDataSkill } from '../models/IDataSkill';
+import { IDataSkill } from '../models/IDataProfile';
 
 interface DataPropsSkill {
     certificate: IDataSkill;
