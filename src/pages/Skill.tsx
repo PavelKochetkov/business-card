@@ -6,7 +6,7 @@ import { IDataSkill } from '../models/IDataProfile';
 import { getProfileOtherSkill, getProfileSkillLibraries, getProfileSkillProgrammingLanguages } from '../api/profile';
 
 export const Skill = () => {
-    const [langugages, setLangugages] = useState<IDataSkill[]>([]);
+    const [languages, setLanguages] = useState<IDataSkill[]>([]);
     const [libraries, setLbraries] = useState<IDataSkill[]>([]);
     const [others, setOthers] = useState<IDataSkill[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
@@ -14,7 +14,7 @@ export const Skill = () => {
         const fetchData = async () => {
             setLoading(true);
             const responceLangugage = await getProfileSkillProgrammingLanguages()
-            setLangugages(responceLangugage.data)
+            setLanguages(responceLangugage.data)
 
             const responceLibraries = await getProfileSkillLibraries()
             setLbraries(responceLibraries.data)
@@ -31,7 +31,7 @@ export const Skill = () => {
             {loading && <Loader />}
             <div className="titleProgLang">Языки программирования</div>
             <div className="proglang">
-                {langugages.map((certificate, index) => (
+                {languages.map((certificate, index) => (
                     <Cardskill certificate={certificate} key={index} />
                 ))}
             </div>

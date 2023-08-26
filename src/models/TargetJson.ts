@@ -1,7 +1,7 @@
 export enum TargetJson {
     contacts = 'contacts.json',
     about = 'about.json',
-    language = 'programminglanguages.json',
+    language = 'languages.json',
     libraries = 'libraries.json',
     other = 'other.json'
 }

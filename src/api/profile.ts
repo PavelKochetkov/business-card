@@ -2,7 +2,6 @@ import axios from "axios";
 import { IDataAbout, IDataContacts, IDataSkill } from "../models/IDataProfile";
 import { TargetJson } from "../models/TargetJson";
 
-
 const baseURL: string = '/business-card/'
 
 export const getProfileContacts = async () => {
