@@ -12,14 +12,9 @@ export const getProfileAbout = async () => {
     return axios.get<IDataAbout[]>(`${baseURL}${TargetJson.about}`)
 }
 
-export const getProfileSkillProgrammingLanguages = async () => {
-    return axios.get<IDataSkill[]>(`${baseURL}${TargetJson.language}`) 
-}
-
-export const getProfileSkillLibraries = async () => {
-    return axios.get<IDataSkill[]>(`${baseURL}${TargetJson.libraries}`) 
-}
-
-export const getProfileOtherSkill = async () => {
-    return axios.get<IDataSkill[]>(`${baseURL}${TargetJson.other}`) 
+export const getProfileSkill = async () => {
+    const language = axios.get<IDataSkill[]>(`${baseURL}${TargetJson.language}`)
+    const libraries = axios.get<IDataSkill[]>(`${baseURL}${TargetJson.libraries}`)
+    const other =  axios.get<IDataSkill[]>(`${baseURL}${TargetJson.other}`) 
+    return ({language, libraries, other})
 }

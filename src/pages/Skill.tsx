@@ -3,7 +3,7 @@ import { Cardskill } from '../components/Cardskill';
 import { Loader } from '../components/Loader';
 import { PageTitle } from '../components/PageTitle';
 import { IDataSkill } from '../models/IDataProfile';
-import { getProfileOtherSkill, getProfileSkillLibraries, getProfileSkillProgrammingLanguages } from '../api/profile';
+import { getProfileSkill } from '../api/profile';
 
 export const Skill = () => {
     const [languages, setLanguages] = useState<IDataSkill[]>([]);
@@ -13,14 +13,14 @@ export const Skill = () => {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const responceLangugage = await getProfileSkillProgrammingLanguages()
-            setLanguages(responceLangugage.data)
+            const responceLangugage = await getProfileSkill()
+            setLanguages((await responceLangugage.language).data)
 
-            const responceLibraries = await getProfileSkillLibraries()
-            setLbraries(responceLibraries.data)
+            const responceLibraries = await getProfileSkill()
+            setLbraries((await responceLibraries.libraries).data)
 
-            const responceOthers = await getProfileOtherSkill()
-            setOthers(responceOthers.data);
+            const responceOthers = await getProfileSkill()
+            setOthers((await responceOthers.other).data);
             setLoading(false);
         };
         fetchData();
